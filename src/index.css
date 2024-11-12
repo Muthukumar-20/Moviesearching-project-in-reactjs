@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+     font-family: "Righteous"
+}
+/* .active{
+    
+     justify-content: space-evenly;
+}
+.search-list-items{
+     display: flex;
+     gap: 2;
+     background-color:gray;
+  width: 80px;
+     justify-content: space-evenly;
+
+     border: 2px;
+     border-color: yellow;
+} */
+
+.search-item-thumbnail img{
+     width: 50px;
+     margin-right: 1rem;
+     gap: 2;
+ }
+ .search-item-info h3{
+     font-weight: 600;
+     font-size: 1rem;
+ }
+ .search-item-info p{
+     font-size: 0.8rem;
+     margin-top: 0.5rem;
+     font-weight: 600;
+     opacity: 0.6;
+ }
+ .search-list-item{
+     display: flex;
+     border: 1px solid rgb(161 98 7);
+     background-color:rgb(3 7 18);
+     cursor: pointer;
+     gap: 2;
+     -webkit-transition: background-color 200ms ease;
+     -o-transition: background-color 200ms ease;
+     transition: background-color 200ms ease;
+ }
+.search-list-item:hover{
+    background-color: #1f1f1f;
+}
+.search-list-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+ .hide-search-list-item{
+    display: none;
+ }
+ .hide-search-list {
+    display: none;
+  }
+/* .search-list{
+    display: none;
+} */
