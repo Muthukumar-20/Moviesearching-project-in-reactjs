@@ -5,7 +5,7 @@ const movies = () => {
     const [data, setData] = useState([]);
 
     function apicall() {
-        fetch("https://www.omdbapi.com/?s=batman&apikey=79b25d3")
+        fetch("http://www.omdbapi.com/?s=batman&apikey=79b25d3")
             .then(response => response.json())
             .then(json => {
                 if (json.Search) {
