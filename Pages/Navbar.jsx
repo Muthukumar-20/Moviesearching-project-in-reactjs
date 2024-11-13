@@ -36,13 +36,15 @@ const navbarRef = useRef(null);
             const URL = `http://www.omdbapi.com/?s=${searchTerm}&apikey=79b25d3`;
             const res = await fetch(`${URL}`);
             const data = await res.json();
+            if (data.Response == "True") displayMovieList(data.Search)
+
         } catch (error) {
             console.log(error)
         }
       
         // console.log(data.Search);
 
-        if (data.Response == "True") displayMovieList(data.Search)
+        
     }
 
 
