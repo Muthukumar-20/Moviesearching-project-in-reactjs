@@ -33,7 +33,7 @@ const navbarRef = useRef(null);
 
     async function loadMovies(searchTerm) {
         try {
-            const URL = `http://www.omdbapi.com/?s=${searchTerm}&apikey=79b25d3`;
+            const URL = `https://www.omdbapi.com/?s=${searchTerm}&apikey=79b25d3`;
             const res = await fetch(`${URL}`);
             const data = await res.json();
             if (data.Response == "True") displayMovieList(data.Search)
@@ -168,7 +168,7 @@ const navbarRef = useRef(null);
                 // console.log(movie.dataset.id);
                 searchList.classList.add("hide-search-list")
                 movieSearchBox.value = "";
-                const result = await fetch(`http://www.omdbapi.com/?i=${movie.dataset.id}&apikey=79b25d3`);
+                const result = await fetch(`https://www.omdbapi.com/?i=${movie.dataset.id}&apikey=79b25d3`);
                 const movieDetails = await result.json()
                 // console.log(movieDetails);
                 displayMovieDetails(movieDetails)
