@@ -219,14 +219,34 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
+// try {
+    
+//   window.addEventListener('click', () => {
+//     searchList.classList.add("hide-search-list");
+// });
 
-  window.addEventListener('click', (event) => {
-    if (event.target.className != "form-control") {
-      searchList.classList.add("hide-search-list");
-    }
-  });
-
+    
+// } catch (error) {
+// console.log(error);
+    
+// }
  
+
+try {
+    window.addEventListener('click', (event) => {
+    //   if (event.target.closest('.search-list')) {
+    //      const searchList = event.target.closest('.search-list');
+        if (searchList) {
+          searchList.classList.add("hide-search-list");
+        }
+    //   }
+    });
+  } catch (error) {
+    console.error(error); // Use console.error for errors
+  }
+
+
+
 
     return (
         <>
